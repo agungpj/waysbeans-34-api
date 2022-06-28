@@ -1,0 +1,37 @@
+{
+  "name": "waysbucks-coffee",
+  "version": "1.0.0",
+  "description": "aplikasi penjualan coffee online",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm start\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agungpj/waysbucks-coffee.git"
+  },
+  "author": "Agung Prasetya Jati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agungpj/waysbucks-coffee/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.29.0",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.16.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
