@@ -1,37 +1,35 @@
 {
-  "name": "waysbucks-coffee",
+  "name": "integration",
   "version": "1.0.0",
-  "description": "aplikasi penjualan coffee online",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "client": "npm start --prefix ../client",
+    "client": "npm start --prefix ../../private-project/dumbmerch/client",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/agungpj/waysbucks-coffee.git"
-  },
-  "author": "Agung Prasetya Jati",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/agungpj/waysbucks-coffee/issues"
-  },
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "cloudinary": "^1.29.0",
-    "concurrently": "^7.0.0",
+    "cloudinary": "^1.30.0",
+    "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.2",
+    "express": "^4.17.1",
     "joi": "^17.4.1",
     "jsonwebtoken": "^8.5.1",
+    "midtrans-client": "^1.3.1",
     "multer": "^1.4.2",
-    "mysql2": "^2.3.3",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.7.5",
     "pg": "^8.7.3",
-    "sequelize": "^6.16.0"
+    "rupiah-format": "^1.0.0",
+    "sequelize": "^6.6.4",
+    "sequelize-cli": "^6.2.0",
+    "socket.io": "^4.1.3"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.4.1"
+    "nodemon": "^2.0.9"
   }
 }
