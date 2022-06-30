@@ -21,11 +21,11 @@ exports.addProduct = async (req, res) => {
 
     const { data } = req.body;
 
-    const result = await cloudinary.uploader.upload(req.file.path, {
-      folder: "waysbean-agung",
-      use_filename: true,
-      unique_filename: false,
-    });
+    // const result = await cloudinary.uploader.upload(req.file.path, {
+    //   folder: "waysbean-agung",
+    //   use_filename: true,
+    //   unique_filename: false,
+    // });
     // code here
     let newProduct = await tb_product.create({
       ...data,
@@ -33,7 +33,8 @@ exports.addProduct = async (req, res) => {
       desc: req.body.desc,
       price: req.body.price,
       stock: req.body.stock,
-      image: result.public_id,
+      // image: result.public_id,
+      image: req.file.filename,
       idUser: req.tb_user.id,
     });
 
