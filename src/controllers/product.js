@@ -22,7 +22,7 @@ exports.addProduct = async (req, res) => {
     const { data } = req.body;
 
     const result = await cloudinary.uploader.upload(req.file.path, {
-      folder: "waysbean-agung",
+      folder: "dumbmerch-agung",
       use_filename: true,
       unique_filename: false,
     });
