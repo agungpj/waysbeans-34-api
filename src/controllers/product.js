@@ -1,5 +1,4 @@
 const { tb_product, tb_user } = require("../../models");
-const cloudinary = require("../../utils/cloudinary");
 exports.addProduct = async (req, res) => {
   try {
     const productExist = await tb_product.findOne({
@@ -20,11 +19,6 @@ exports.addProduct = async (req, res) => {
 
     const { data } = req.body;
 
-    const result = await cloudinary.uploader.upload(req.file.path, {
-      folder: "dumbmerch-agung",
-      use_filename: true,
-      unique_filename: false,
-    });
     // code here
     let newProduct = await tb_product.create({
       ...data,
@@ -32,7 +26,7 @@ exports.addProduct = async (req, res) => {
       desc: req.body.desc,
       price: req.body.price,
       stock: req.body.stock,
-      image: result.public_id,
+      image: req.file.filename,
       idUser: req.tb_user.id,
     });
 
